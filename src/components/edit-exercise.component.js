@@ -1,6 +1,5 @@
 import { Component } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 import DatePicker from "react-datepicker";
 class EditExercise extends Component{
     constructor(props){
