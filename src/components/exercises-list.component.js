@@ -1,6 +1,8 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+var editImg = require('../images/edit.png')
+var dltImg = require('../images/delete.png')
 
 // Exercise component
 const Exercise = props => (
@@ -10,7 +12,7 @@ const Exercise = props => (
         <td>{props.exercise.duration}</td>
         <td>{props.exercise.date.substring(0,10)}</td>
         <td>
-            <Link to={"/edit/"+props.exercise._id}>edit</Link> | <a href="#" onClick={() => {props.deleteExercise(props.exercise._id)}}>delete</a>
+            <Link to={"/edit/"+props.exercise._id}><img src={editImg} style={{width:20, height: 20}}/></Link> | <a href="#" onClick={() => {props.deleteExercise(props.exercise._id)}}><img src={dltImg}style={{width:20, height: 20}}/></a>
         </td>
     </tr>
 )

@@ -71,7 +71,6 @@ class EditExercise extends Component{
         }
         console.log(exercise);
         const id = window.location.pathname.split('/').pop();
-        console.log(id);
         axios.post('http://localhost:5000/exercises/update/'+id, exercise)
         .then(res => console.log(res.data));
         window.location = '/';
