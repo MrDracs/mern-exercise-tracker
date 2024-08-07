@@ -10,7 +10,7 @@ This is a full-stack web application built using the MERN stack (MongoDB, Expres
 - [Contributing](#contributing-)
 
 
-## Snapshots 📸
+## Snapshot 📸
 
 Here are some snapshots of the MERN Exercise Tracker application:
 ### Home Page (Exercise Logs Screen)
