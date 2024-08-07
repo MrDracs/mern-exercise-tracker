@@ -14,16 +14,17 @@ This is a full-stack web application built using the MERN stack (MongoDB, Expres
 
 Here are some snapshots of the MERN Exercise Tracker application:
 ### Home Page (Exercise Logs Screen)
-![Screenshot of Logs](/mern-exercise-tracker/src/images/logsPage.png)
+![Screenshot of Logs](/src/images/logsPage.png)
 
 ### Add Exercise Form
-![Screenshot of Create Execises Page](/mern-exercise-tracker/src/images/createNewExercises.png)
+![Screenshot of Create Exercises Page](/src/images/createNewExercises.png)
 
 ### Add Users Form
-![Screenshot of Create Users Page](/mern-exercise-tracker/src/images/createUser.png)
+![Screenshot of Create Users Page](/src/images/createUser.png)
 
 ### Edit Exercise Log Form
-![Screenshot of Edit Exercise Log Page](/mern-exercise-tracker/src/images/editExercises.png)
+![Screenshot of Edit Exercise Log Page](/src/images/editExercises.png)
+
 Feel free to explore the application and see how it looks in action! 🌟
 
 ## Features ✨
