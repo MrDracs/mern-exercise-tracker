@@ -1,7 +1,8 @@
 import { Component } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 import DatePicker from "react-datepicker";
-export default class EditExercise extends Component{
+class EditExercise extends Component{
     constructor(props){
         super(props);
         // bind this to the methods
@@ -20,8 +21,12 @@ export default class EditExercise extends Component{
             users: []
         }
     }
+    // make a hook function to define params
+
     componentDidMount(){
-        axios.get('http://localhost:5000/exercises/'+this.props.match.params.id)
+        
+        const id = window.location.pathname.split('/').pop();
+        axios.get('http://localhost:5000/exercises/'+id)
         .then(response => {
             this.setState({
                 username: response.data.username,
@@ -29,12 +34,6 @@ export default class EditExercise extends Component{
                 duration: response.data.duration,
                 date: new Date(response.data.date)
             })
-            .catch(
-                (error) => {
-                    console.log(error
-                        );
-                }
-            )
         })
         axios.get('http://localhost:5000/users/')
         .then(response => {
@@ -72,7 +71,9 @@ export default class EditExercise extends Component{
             date: this.state.date
         }
         console.log(exercise);
-        axios.post('http://localhost:5000/exercises/update/'+this.props.match.params.id, exercise)
+        const id = window.location.pathname.split('/').pop();
+        console.log(id);
+        axios.post('http://localhost:5000/exercises/update/'+id, exercise)
         .then(res => console.log(res.data));
         window.location = '/';
     }
@@ -149,3 +150,4 @@ export default class EditExercise extends Component{
         )
     }
 }
+export default EditExercise;
